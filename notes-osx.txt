@@ -1,0 +1,11 @@
+application:ensure_all_started(ssl),ssl:connect("google.com",443,[{verify,verify_peer},{reuse_sessions,false},{cacertfile,"/etc/ssl/cert.pem"},{depth,99}]).
+
+application:ensure_all_started(ssl),ssl:connect("google.com",443,[{verify,verify_peer},{reuse_sessions,false},{cacertfile,"/etc/ssl/certs/ca-certificates.crt"},{depth,99}]).
+
+application:ensure_all_started(ssl),ssl:connect("google.com",443,[{verify,verify_peer},{reuse_sessions,false},{cacertfile,"/Users/lbakken/development/misc/cacert.pem"},{depth,99}]).
+
+application:ensure_all_started(ssl),ssl:connect("google.com",443,[{verify,verify_peer},{reuse_sessions,false},{cacertfile,"/Users/lbakken/development/misc/ca-bundle.crt"},{depth,99}]).
+
+Used to work on Ubuntu 16 - ca-certificates 20160104ubuntu1
+
+Update 2017 12 04 - ca-certificates 20170717~16.04.1
